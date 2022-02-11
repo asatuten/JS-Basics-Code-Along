@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS OOP ES5 (the old way)</title>
+    <script>
+       function Person(firstName, lastName, id) {
+           this.firstName = firstName;
+           this.lastName = lastName;
+           this.id = id;
+       }
+       Person.prototype.getFullName = () => this.firstName + ' ' + this.lastName;
+       let jim = new Person('Jim', 'Green', 1001);
+       console.log(jim.getFullName());
+       console.log(jim);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

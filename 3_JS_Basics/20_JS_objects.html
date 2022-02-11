@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JS Object Literals</title>
+	<script>
+		// define an object literal
+		let person = {
+			firstName: 'John',
+			lastName: 'Doe',
+			hobbies: ['music', 'Football', 'Coding'],
+			id: 5566,
+			address: {
+				street: '123 Main Street',
+				city: 'Fort Worth',
+				state: 'TX',
+				zip: '76129'
+			},
+			getFullName: function () {
+				return this.firstName + ' ' + this.lastName;
+			}
+		};
+		console.log(person);
+		console.log(person.firstName);
+		console.log(person['firstName']);
+		console.log(person.hobbies[2]);
+		person.ssn = '123456789';
+		console.log(person.ssn);
+		console.log(person.address.city);
+		console.log(person.getFullName);
+
+		const { firstName, lastName, id } = person;
+		console.log(firstName, lastName, id);
+		const { firstName: fn, lastName: ln, id: di} = person;
+		console.log(fn, ln, di);
+
+		let person2 = new Object();
+		person2.firstName = 'John';
+		person2.lastName = 'Doe';
+		person2.age = 50;
+		person2.eyeColor = 'blue';
+
+		for (property in person2) {
+			document.write(person2[property] + '<br>');
+		}
+
+		console.log(JSON.stringify(person));
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

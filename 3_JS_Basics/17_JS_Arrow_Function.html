@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrow Functions</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        let add = function (num1, num2) {
+            return num1 + num2;
+        }
+
+        add = (num1, num2) => {
+            return num1 + num2;
+        };
+
+        add = (num1, num2) => num1 + num2;
+
+        let squareNumber = number => number * number;
+        console.log(squareNumber(5));
+
+        fetch('http://api.icndb.com/jokes/random/5', { method: 'GET' })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+            });
+    </script>
+</body>
+
+</html>

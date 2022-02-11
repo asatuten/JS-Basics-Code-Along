@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+    <script>
+        let fun1 = new Function('a', 'b', 'c', 'console.log(a);');
+        function fun2(a, b) {
+            console.log(a+b);
+        }
+        fun2(3,4);
+        console.log(fun2.length);
+        fun2();
+        let fun3 = function (a = 1, b) {
+            console.log(a+b);
+        }        
+        function add() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++){
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        let sum = add(1, 2, 3, 4)
+        function add2(a, b, ...manyMoreArgs) {
+            let sum = a + b;
+            for(let i = 0; i < manyMoreArgs.length; i++){
+                sum += manyMoreArgs[i];
+            }
+            return sum;
+        }
+        sum = add2(1, 2, 3, 4);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

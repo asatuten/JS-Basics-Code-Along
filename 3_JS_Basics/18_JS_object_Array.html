@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    <script>
+        let arr1 = new Array(1, 2, 3);
+        let arr2 = new Array(5);
+        let arr3 = [1, 2, 3, 4];
+
+        let isArray = Array.isArray(arr1);
+        document.write(isArray + '<br>');
+
+        for(const iterator of arr3) {
+            document.write(iterator + '<br>');
+        }
+
+        let arr4 = new Array();
+
+        document.write(arr1 + '<br>');
+        document.write(arr2 + '<br>');
+        document.write(arr3 + '<br>');
+        document.write(arr4 + '<br>');
+
+        let arr = [1, 'abc', true];
+
+        document.write(arr + '<br>');
+
+        document.write(arr[0] + '<br>');
+        document.write(arr[1] + '<br>');
+        document.write(arr[2] + '<br>');
+
+        arr[10] = 'Hello';
+        document.write(arr + '<br>');
+        document.write(arr[10] + '<br>');
+        document.write(arr[9] + '<br>');
+
+        document.write(arr.join('--') + '<br>');
+        arr.push(11);
+        document.write(arr.join('--') + '<br>');
+
+        const todos = [
+            {
+                userId: 1,
+                id: 1,
+                title: 'delectus aut autem',
+                completed: false
+            },
+            {
+                userId: 1,
+                id: 2,
+                title: 'quis ut nam facilis et official qui',
+                completed: false
+            },
+            {
+                userId: 1,
+                id: 3,
+                title: 'fugiat veniam minus',
+                completed: false
+            },
+            {
+                userId: 1,
+                id: 4,
+                title: 'et porro tempora',
+                completed: true
+            }
+        ];
+
+        console.log(todos);
+
+        console.log(todos[2].title);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
